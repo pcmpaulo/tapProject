@@ -11,13 +11,13 @@ package tap;
  */
 public class Encomenda {
     private int idEncomenda;
-    private long dataDeposito;
+    private String dataDeposito;
     private float peso;
     private String codigoLocalizador;
     private Pessoa remetente;
     private Pessoa destinatario;
     
-    Encomenda(long dataDeposito, float peso, String codigoLocalizador, Pessoa rementente, Pessoa destinatario){
+    Encomenda(String dataDeposito, float peso, String codigoLocalizador, Pessoa rementente, Pessoa destinatario){
         this.dataDeposito = dataDeposito;
         this.peso = peso;
         this.codigoLocalizador = codigoLocalizador;
@@ -33,11 +33,11 @@ public class Encomenda {
         this.idEncomenda = idEncomenda;
     }
 
-    public long getDataDeposito() {
+    public String getDataDeposito() {
         return dataDeposito;
     }
 
-    public void setDataDeposito(long dataDeposito) {
+    public void setDataDeposito(String dataDeposito) {
         this.dataDeposito = dataDeposito;
     }
 

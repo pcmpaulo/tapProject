@@ -12,32 +12,25 @@ package tap;
 public class Roteiro {
     private int idRoteiro;
     private Encomenda[] listaEncomendas;
-    private Veiculo veiculo;
+    private Veiculo[] listaVeiculos;
+    private Entrega[] listaEntregas;
+    private long data;
     
-    Roteiro(){
+    
+    Roteiro(Encomenda[] listaEncomendas, Veiculo[] listaVeiculos){
+        this.listaEncomendas = listaEncomendas;
+        this.listaVeiculos = listaVeiculos;
     }
 
     public int getIdRoteiro() {
         return idRoteiro;
     }
 
-    public void setIdRoteiro(int idRoteiro) {
-        this.idRoteiro = idRoteiro;
-    }
-
     public Encomenda[] getListaEncomendas() {
         return listaEncomendas;
     }
 
-    public void setListaEncomendas(Encomenda[] listaEncomendas) {
-        this.listaEncomendas = listaEncomendas;
+    public Veiculo[] getVeiculo() {
+        return listaVeiculos;
     }
-
-    public Veiculo getVeiculo() {
-        return veiculo;
-    }
-
-    public void setVeiculo(Veiculo veiculo) {
-        this.veiculo = veiculo;
-    }
-}
+  }

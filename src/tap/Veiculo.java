@@ -12,20 +12,19 @@ package tap;
 public class Veiculo {
     private int idVeiculo;
     private int status;
-    private String tipoVeiculo;
+    private TipoVeiculo tipoVeiculo;
     private String marca;
     private String modelo;
     private int ano;
     private String placa;
-    private int capacidadeCarga;
 
-    Veiculo(String tipoVeiculo, String marca, String modelo, int ano, String placa, int capacidadeCarga){
+    Veiculo(int status, TipoVeiculo tipoVeiculo, String marca, String modelo, int ano, String placa){
+        this.status = status;
         this.tipoVeiculo = tipoVeiculo;
         this.marca= marca;
         this.modelo = modelo;
         this.ano = ano;
         this.placa = placa;
-        this.capacidadeCarga = capacidadeCarga;
     }
     
     public int getIdVeiculo() {
@@ -40,11 +39,11 @@ public class Veiculo {
         this.status = status;
     }
 
-    public String getTipoVeiculo() {
+    public TipoVeiculo getTipoVeiculo() {
         return tipoVeiculo;
     }
 
-    public void setTipoVeiculo(String tipoVeiculo) {
+    public void setTipoVeiculo(TipoVeiculo tipoVeiculo) {
         this.tipoVeiculo = tipoVeiculo;
     }
 
@@ -79,12 +78,4 @@ public class Veiculo {
     public void setPlaca(String placa) {
         this.placa = placa;
     }
-
-    public int getCapacidadeCarga() {
-        return capacidadeCarga;
-    }
-
-    public void setCapacidadeCarga(int capacidadeCarga) {
-        this.capacidadeCarga = capacidadeCarga;
-    }    
 }

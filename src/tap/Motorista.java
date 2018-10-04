@@ -9,17 +9,26 @@ package tap;
  *
  * @author hyper
  */
-public class Motorista extends Funcionario {
+public class Motorista extends Pessoa {
     
     private int idMotorista;
-    private char tipoCNH;
+    private String tipoCNH;
     private int numeroCNH;
-    //Veículo
+    private String dataNascimento;
     
-    public Motorista(String nome, Endereco endereco, int cpf, long dataNascimento, char tipoCNH, int numeroCNH) {
-        super(nome, endereco, cpf, dataNascimento);
+    public Motorista(String nome, Endereco endereco, String dataNascimento, String tipoCNH, int numeroCNH) {
+        super(nome, endereco);
+        this.dataNascimento = dataNascimento;
         this.tipoCNH = tipoCNH;
         this.numeroCNH = numeroCNH;
+    }
+
+    public String getDataNascimento() {
+        return dataNascimento;
+    }
+
+    public void setDataNascimento(String dataNascimento) {
+        this.dataNascimento = dataNascimento;
     }
 
     public int getIdMotorista() {
@@ -30,11 +39,11 @@ public class Motorista extends Funcionario {
         this.idMotorista = idMotorista;
     }
 
-    public char getTipoCNH() {
+    public String getTipoCNH() {
         return tipoCNH;
     }
 
-    public void setTipoCNH(char tipoCNH) {
+    public void setTipoCNH(String tipoCNH) {
         this.tipoCNH = tipoCNH;
     }
 

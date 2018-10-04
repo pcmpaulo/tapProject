@@ -13,12 +13,12 @@ public class Pessoa {
     private int idPessoa;
     private String nome;
     private Endereco endereco;
-    private int cpf;
+//    private int cpf;
     
-    Pessoa(String nome, Endereco endereco, int cpf){
+    Pessoa(String nome, Endereco endereco){
         this.nome = nome;
         this.endereco = endereco;
-        this.cpf = cpf;
+//        this.cpf = cpf;
     }
     
     public int getIdPessoa() {
@@ -41,11 +41,11 @@ public class Pessoa {
         this.endereco = endereco;
     }
 
-    public int getCpf() {
-        return cpf;
-    }
-
-    public void setCpf(int cpf) {
-        this.cpf = cpf;
-    }
+//    public int getCpf() {
+//        return cpf;
+//    }
+//
+//    public void setCpf(int cpf) {
+//        this.cpf = cpf;
+//    }
 }
